@@ -1,12 +1,12 @@
 # ==========================
 # 1) Стадия сборки (builder)
 # ==========================
-FROM golang:1.20-alpine AS builder
+FROM golang:1.23-alpine AS builder
 
 WORKDIR /app
 
 # Копируем файлы go.mod/go.sum, чтобы сначала скачать зависимости
-COPY go.mod go.sum ./
+COPY . ./
 RUN go mod download
 
 # Копируем весь код бэкенда

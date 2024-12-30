@@ -22,7 +22,7 @@ apt update && apt install -y git curl
 # Install Go (if not already installed)
 if ! command -v go &> /dev/null; then
   echo "[INFO] Installing Go..."
-  curl -fsSL https://dl.google.com/go/go1.20.7.linux-amd64.tar.gz -o go.tar.gz
+  curl -fsSL https://dl.google.com/go/go1.23.0.linux-amd64.tar.gz -o go.tar.gz
   tar -C /usr/local -xzf go.tar.gz
   echo "export PATH=\$PATH:/usr/local/go/bin" >> /etc/profile
   source /etc/profile
